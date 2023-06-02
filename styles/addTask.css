@@ -8,6 +8,12 @@ button{
     cursor: pointer;
 }
 
+.sub-task-cross{
+    width: 20px;
+    height: 20px;
+
+}
+
 .frame0 {
     margin: 0;
     height: 100vh;

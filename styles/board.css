@@ -1,5 +1,6 @@
-body{
+html,body{
     background-color: #F5F5F5;
+    height: 100%;
 }
 
 .board-header {

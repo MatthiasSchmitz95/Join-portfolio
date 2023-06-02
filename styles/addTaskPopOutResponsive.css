@@ -402,14 +402,248 @@
     }
 }
 
-@media(max-height:800px){
-    
-.buttonsContainer {
-    margin-top: 130px;
+@media(max-height:900px) {
 
+    .headlineContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .SubtaskAppendixContainer {
+        padding-bottom: 110px;
+    }
+
+    .bg {
+        display: none;
+    }
+
+    .popOut-taskCard {
+        width: calc(100% - 230px);
+        left: 230px;
+        height: 100%;
+        border-radius: 0px;
+        box-shadow: none;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+        transform: translate(0, 0px);
+    }
+
+    .closeBtnContainer {
+        position: absolute;
+        top: 110px;
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        margin-left: 0px;
+    }
+
+    .closeBtnContainer span {
+        width: 422px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .contentContainer {
+        box-sizing: border-box;
+        width: 85%;
+        height: 100%;
+        margin-left: 0px !important;
+    }
+
+    .scrollY {
+        overflow-y: scroll !important;
+    }
+
+    .headline {
+        display: flex;
+        justify-content: space-between;
+        width: 380px;
+    }
+
+    .topBoxRight {
+        flex-direction: column-reverse;
+    }
+
+    .topContent {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .midLine {
+        display: none;
+    }
+
+    .bottomContent {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .buttonsContainer {
+        display: none;
+    }
+
+    .createButtonResponsiveContainer {
+        position: absolute;
+        top: -72px;
+        z-index: 91;
+        display: flex;
+        justify-content: center;
+        height: 51px;
+        width: 85%;
+        border: none;
+    }
+
+    .createButtonResponsiveContainer div {
+        width: 380px;
+        height: 51px;
+        display: flex;
+        justify-content: flex-end;
+        border: none;
+    }
+
+    .createButtonResponsive {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 120%;
+        color: #FFFFFF;
+        background: #2A3647;
+        border-radius: 10px;
+        width: 124px;
+    }
+
+    .createButtonResponsive:hover {
+        border: none;
+        background-color: #29ABE2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .createButtonResponsive:active {
+        background-color: #091931;
+    }
+
+    .titleContainer {
+        box-sizing: border-box;
+        width: 100% !important;
+    }
+
+    .kanban {
+        display: none !important;
+    }
+
+    .profile-container-d-none {
+        display: none;
+    }
+
+    .KanbanResponsive {
+        position: absolute;
+        top: 25px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        color: #000000;
+    }
+
+    .KanbanResponsive span {
+        width: 422px;
+    }
+
+    .clearButton {
+        display: none;
+    }
+
+    .newAssignToInput,
+    .newCategoryInput {
+        padding-left: 10px;
+    }
+
+    .input {
+        width: 238px !important;
+    }
+
+    .subtaskOninput {
+        padding-left: 0px !important;
+    }
 }
 
-.clearButton {
-    top: 559px;
-}
+@media(max-width:800px) {
+
+
+
+    .assignedList {
+        padding-right: 10px !important;
+    }
+
+    .kanban {
+        display: none;
+    }
+
+    .scrollY {
+        overflow-y: scroll !important;
+    }
+
+
+    .popOut-taskCard {
+        width: 100%;
+        background: #f6f7f8;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 0px;
+        margin-top: 79.02px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: none !important;
+        border-radius: 0px !important;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+        transform: translate(0px, 0px);
+    }
+
+    .popOut-hidden {
+        position: fixed;
+        top: -10px;
+        left: 130px;
+        width: 100%;
+        height: auto;
+        background: #f6f7f8;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        margin: 100px;
+        z-index: 6;
+        transform: translate(1870px, 0px);
+        transition: 200ms;
+    }
+
+    .closeBtnContainer {
+        position: absolute;
+        top: 27px;
+        box-sizing: border-box;
+        width: 363px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .headlineContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .headline {
+        display: flex;
+        justify-content: space-between;
+        height: 78px;
+        margin-top: 27px;
+        padding-left: 0px;
+        font-size: 47px;
+        width: 363px !important;
+    }
 }
