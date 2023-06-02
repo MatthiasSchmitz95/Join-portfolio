@@ -57,10 +57,7 @@
         width: 94%;
     }
 
-    .popOut-taskCard {
-        margin-top: unset;
-        top: -50px;
-    }
+
 
     .topBoxLeft {
         width: 380px;
@@ -149,15 +146,16 @@
         width: 255px;
     }
 
-    .newAssignToInput, .newCategoryInput{
+    .newAssignToInput,
+    .newCategoryInput {
         padding-left: 10px !important;
     }
 
-    .input{
+    .input {
         width: 238px !important;
     }
 
-    .subtaskOninput{
+    .subtaskOninput {
         padding-left: 0px !important;
     }
 }
@@ -173,20 +171,17 @@
         padding-bottom: 110px;
     }
 
-    .popOut-taskCard {
-        margin-top: 96px;
-    }
-
     .bg {
         display: none;
     }
 
     .popOut-taskCard {
-        width: 100%;
+        left: 230px;
         height: 100%;
         border-radius: 0px;
         box-shadow: none;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+        transform: translate(0, 0px);
     }
 
     .closeBtnContainer {
@@ -321,14 +316,16 @@
         display: none;
     }
 
-    .newAssignToInput, .newCategoryInput{
+    .newAssignToInput,
+    .newCategoryInput {
         padding-left: 10px;
     }
 
-    .input{
+    .input {
         width: 238px !important;
     }
-    .subtaskOninput{
+
+    .subtaskOninput {
         padding-left: 0px !important;
     }
 }
@@ -360,6 +357,7 @@
         box-shadow: none !important;
         border-radius: 0px !important;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+        transform: translate(0px, 0px);
     }
 
     .popOut-hidden {
@@ -402,4 +400,16 @@
         font-size: 47px;
         width: 363px !important;
     }
+}
+
+@media(max-height:800px){
+    
+.buttonsContainer {
+    margin-top: 130px;
+
+}
+
+.clearButton {
+    top: 559px;
+}
 }

@@ -12,6 +12,12 @@ button{
     cursor: pointer;
 }
 
+.sub-task-cross{
+    width: 20px;
+    height: 20px;
+
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -19,8 +25,8 @@ input:-webkit-autofill:active {-webkit-box-shadow: 0 0 0 30px white inset !impor
 
 .popOut-taskCard {
     position: fixed;
-    top: -99px;
-    left: 130px;
+    top: 91px;
+    left: calc(50% + 130px);
     width: 1116px;
     height: 914px;
     background: #FFFFFF;
@@ -28,11 +34,11 @@ input:-webkit-autofill:active {-webkit-box-shadow: 0 0 0 30px white inset !impor
     border-radius: 30px;
     display: flex;
     flex-direction: column;
-    margin: 100px;
     z-index: 26;
-    transform: translate(0px, 0px);
+    transform: translate(-50%, 0px);
     transition: 500ms;
 }
+
 
 .popOut-hidden {
     position: fixed;

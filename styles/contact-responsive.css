@@ -33,11 +33,11 @@
     }
 
     .add-contact-card {
-       
-        
+
+
         top: 11.02px;
         bottom: 0px;
-        
+
         width: 480px;
         height: auto;
         flex-direction: column;
@@ -382,6 +382,7 @@
 
     .right-container {
         margin-bottom: 0px;
+        margin-top: 85px;
     }
 }
 

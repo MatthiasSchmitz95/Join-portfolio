@@ -1,4 +1,4 @@
- /**
+/**
  * Close the dropdown container from category
  * 
  */

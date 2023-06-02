@@ -462,11 +462,9 @@ function addSubTask() {
 function chooseSubtasks() {
     selectedSubtasks.splice(0);
     let allChekbox = document.querySelectorAll(`.checkedSubTasks`);
-    for (let i = 0; i < allChekbox.length; i++) {
-        const checkbox = allChekbox[i];
-        if (checkbox.checked) {
-            selectedSubtasks.push(checkbox.value);
-        }
+    for (let i = 0; i < subTasks.length; i++) {
+        const task = subTasks[i];
+        selectedSubtasks.push(task);
     }
 }
 
@@ -480,12 +478,17 @@ function renderSubtasks() {
         const showSubTask = subTasks[i];
         appendixSubtask.innerHTML += /*html*/`
             <label class="container">
-                <input type="checkbox" class="checkedSubTasks" onclick="chooseSubtasks()" value="${showSubTask}" />
-                <span class="checkmark" id="checkmark${i}"></span>
+                <img class="sub-task-cross" src="assets/img/close-contact-card.png" onclick="deleteSubtask(${i})" />
                 <div class="subtaskCheck">${showSubTask}</div>
             </label>
             `;
     }
+    chooseSubtasks();
+}
+
+function deleteSubtask(i) {
+    subTasks.splice(i, 1);
+    renderSubtasks();
 }
 
 /**
@@ -562,10 +565,10 @@ async function addTaskOnSubPages() {
         closeDropDownAssignTo();
         choseContacts = [];
         updateHTML();
-        selectedSubtasks= [];
+        selectedSubtasks = [];
         p = false;
     }
-  
+
 }
 
 /** This function decides with the priority background color which Priority has been activated and get all the inputs of the one priority box*/
@@ -666,7 +669,7 @@ function annimationTaskAddedToBoardForPopOut() {
 function generateTaskId(tasks) {
     if (tasks.length == 0) {
         id = 0;
-    } else{
+    } else {
         var id = tasks.length;
         var idExists = true;
         while (idExists) {
@@ -874,16 +877,16 @@ function filterContact() {
  * this function delete the category from the user after the input number of the category
  * @param {number} number - this is the activUser category-array number 
  */
-async function deleteCategory(number){
-let user = userAccounts[activeUser]['userCategory'];
-for (let i = 0; i < user.length; i++) {
-    if (i === number) {
-        user.splice(i, 1);
-        break;
+async function deleteCategory(number) {
+    let user = userAccounts[activeUser]['userCategory'];
+    for (let i = 0; i < user.length; i++) {
+        if (i === number) {
+            user.splice(i, 1);
+            break;
+        }
     }
-}
-await saveTasksToBackend()
-await saveUserAccountsToBackend();
-closeOverlay();
-updateHTML();
+    await saveTasksToBackend()
+    await saveUserAccountsToBackend();
+    closeOverlay();
+    updateHTML();
 }
