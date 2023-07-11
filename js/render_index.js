@@ -10,14 +10,12 @@ function renderLogin() {
         <div class="line-login"></div>
         <div class="input-container">
             <div class="input-field">
-                <input required class="input" type="email" name="email" id="login-email-input" placeholder="Email">
-                <img src="./assets/img/email-icon.png">
+                <input  required class="input mail" type="email" name="email" id="login-email-input" placeholder="Email">
             </div>
             <div id="wrongEmail">
             </div>
             <div class="input-field">
-                <input required class="input togglePassword" type="password" name="password" id="login-password-input" placeholder="Password">
-                <img class="toogleImage" onclick="togglePassword()" src="./assets/img/password-icon.png">
+                <input required class="input togglePassword pw" type="password" name="password" id="login-password-input" placeholder="Password">
             </div>
             <div id="wrongPassword">
             </div>
