@@ -144,7 +144,7 @@ function showOverlayChangeHTML3() {
     <div class="prioMediumBox" id="prioMediumBox" onclick="insertMedium()">Medium <img
             id="prioMediumImg" src="assets/img/medium.png"></div>
     <div class="prioLowBox" id="prioLowBox" onclick="insertLow()">Low <img id="prioLowImg"
-            src="assets/img/low.png"></div>
+            src="assets/img/Low.png"></div>
 </div>`
 ;
 }

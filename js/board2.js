@@ -150,7 +150,7 @@ function getPriority() {
         priorityImg = "assets/img/medium.png";
     } else {
         priority = document.getElementById('prioLowBox').innerText;
-        priorityImg = "assets/img/low.png";
+        priorityImg = "assets/img/Low.png";
     }
     return { priority, priorityImg };
 }

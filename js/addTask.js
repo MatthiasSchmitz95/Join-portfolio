@@ -8,6 +8,7 @@ var subtaskInput;
 var appendixSubtask;
 var categoryList;
 var choseContacts = [];
+var checked = false;
 var l = false;
 var j = false;
 var p = false
@@ -193,9 +194,20 @@ async function renderAssignTo() {
     assignedContactList.innerHTML = ""; //clear container inside html
     for (let i = 0; i < userAccounts[activeUser]['userContacts'].length; i++) {
         userName = userAccounts[activeUser]['userContacts'][i]['name'];
-        assignedContactList.innerHTML += templateRenderAssignToContacts(userName);
+        assignedContactList.innerHTML += templateRenderAssignToContacts(userName,i);
     }
     assignedContactList.innerHTML += templateRenderAssignToNewContact();
+}
+
+function checkCheckbox(userName,i) {
+  
+        document.getElementById('checkbox'+i).checked =!document.getElementById('checkbox'+i).checked;
+    
+
+
+    chooseContact(userName);
+
+
 }
 
 /**
@@ -203,12 +215,12 @@ async function renderAssignTo() {
  * @param {string} userName - the name of the assigned contact at certain index
  * @returns - the contact names
  */
-function templateRenderAssignToContacts(userName) {
+function templateRenderAssignToContacts(userName,i) {
     return /*html*/`
-    <div class="assignedContact" >
+    <div class="assignedContact" onclick="checkCheckbox('${userName}',${i})" >
         <div>${userName}</div>
         <label class="filledCheckboxContainer">
-            <input type="checkbox" class="checkboxForContacts" value="${userName}" onclick="chooseContact('${userName} ')">
+            <input id="checkbox${i}" type="checkbox" class="checkboxForContacts" value="${userName}" onclick="chooseContact('${userName} ')">
             <span class="checkmark"></span>
         </label>
     </div>
@@ -330,12 +342,11 @@ function showDropDownAssignTo() {
     }
 }
 
-/**This function is used for invite new contact via an Email to assign into the Kanban Project Managment Tool*/
 function assignToInput() {
     helpVarSumit = true;
     document.getElementById('assignedList').innerHTML = `<form action="/Join/send-email.php" method="post">
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email placeholder="email"">
+    <input type="email" id="email" name="email" placeholder="email">
     <button type="submit" onclick="showEmailSentStatus()">Submit</button>
     </form>`;
     document.getElementById('assignedList').style.display = "block !important";
@@ -587,7 +598,7 @@ function getPriorityInformation() {
         p = true;
         priority = document.getElementById('prioLowBox').innerText;
         priorityImg = document.createElement("prioLowImg");
-        priorityImg = "assets/img/low.png";
+        priorityImg = "assets/img/Low.png";
     }
 }
 
@@ -868,7 +879,7 @@ function filterContact() {
         userName = userAccounts[activeUser]['userContacts'][i]['name'];
         userNameLowerLetter = userName.toLowerCase();
         if (userNameLowerLetter.includes(search)) {
-            content.innerHTML += templateRenderAssignToContacts(userName);
+            content.innerHTML += templateRenderAssignToContacts(userName,i);
         }
     }
 }

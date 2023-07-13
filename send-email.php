@@ -1,11 +1,16 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 if (isset($_POST['email'])) {
   $to = $_POST['email'];
   $subject = 'Invite to Join';
   $message = 'Are you tired of struggling to manage your projects?
               Do you want a reliable and efficient tool to help you plan, track, and complete your projects with ease?
-              If so, we have the perfect solution for you: Join!';
+              If so, we have the perfect solution for you: Join!
+
+        
+              https://matthias-schmitz.developerakademie.net/Join/index.html';
   $headers = 'From: Join-mail@web.de' . "\r\n" .
              'Reply-To: Join-mail@web.de' . "\r\n" .
              'X-Mailer: PHP/' . phpversion();

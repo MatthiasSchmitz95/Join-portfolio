@@ -227,7 +227,7 @@ function priorityImgCard(cards) {
     } else if (card == 'Medium') {
         prio.innerHTML = '<img src="assets/img/medium.png">';
     } else {
-        prio.innerHTML = '<img src="assets/img/low.png">';
+        prio.innerHTML = '<img src="assets/img/Low.png">';
     }
 }
 
