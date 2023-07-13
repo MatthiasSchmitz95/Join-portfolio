@@ -172,7 +172,7 @@
     }
 
     .search-button {
-        display: flex;
+        display: flex !important;
         width: unset;
     }
 
@@ -180,7 +180,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-top: 114px;
+        margin-top: 153px;
         justify-content: space-between;
         margin-left: 30px;
         width: unset;

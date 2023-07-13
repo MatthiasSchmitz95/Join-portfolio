@@ -8,7 +8,7 @@ html,body{
     flex-direction: row;
     align-items: center;
     gap: 40%;
-    margin-top: 82px;
+    margin-top: calc(82px + 69px);
     margin-left: 302px;
 }
 
@@ -22,10 +22,11 @@ html,body{
 h2 {
     font-size: 61px;
     line-height: 120%;
+    margin: 0px;
 }
 
 .search-button {
-    display: none;
+    display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
